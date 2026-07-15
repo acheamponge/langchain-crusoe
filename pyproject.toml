@@ -4,11 +4,11 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "langchain-crusoe"
-version = "0.1.1"
+version = "0.1.2"
 description = "An integration package connecting Crusoe AI and LangChain"
 authors = ["Crusoe Energy Systems <support@crusoe.ai>"]
 readme = "README.md"
-repository = "https://github.com/crusoecloud/langchain-crusoe"
+repository = "https://github.com/acheamponge/langchain-crusoe"
 license = "MIT"
 include = ["langchain_crusoe/py.typed"]
 
@@ -70,8 +70,8 @@ asyncio_mode = "auto"
 disallow_untyped_defs = "True"
 
 [tool.poetry.urls]
-"Source Code" = "https://github.com/crusoecloud/langchain-crusoe"
-"Release Notes" = "https://github.com/crusoecloud/langchain-crusoe/releases"
+"Source Code" = "https://github.com/acheamponge/langchain-crusoe"
+"Release Notes" = "https://github.com/acheamponge/langchain-crusoe/releases"
 
 [tool.codespell]
 skip = '.git,*.pdf,*.svg,*.yaml,*.ipynb,poetry.lock,*.min.js,*.css,package-lock.json'

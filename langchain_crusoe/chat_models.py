@@ -1,7 +1,8 @@
 """Crusoe AI Chat Models integration for LangChain.
 
 Wrapper around Crusoe's Managed Inference API, which provides
-an OpenAI-compatible chat completions endpoint at api.crusoe.ai.
+an OpenAI-compatible chat completions endpoint at
+api.inference.crusoecloud.com.
 """
 
 from typing import Any, Dict, List, Optional
@@ -161,12 +162,12 @@ class ChatCrusoe(BaseChatOpenAI):
 
     crusoe_api_base: str = Field(
         default_factory=from_env(
-            "CRUSOE_API_BASE", default="https://managed-inference-api-proxy.crusoecloud.com/v1/"
+            "CRUSOE_API_BASE", default="https://api.inference.crusoecloud.com/v1"
         ),
     )
     """Base URL for the Crusoe API.
 
-    Defaults to ``https://managed-inference-api-proxy.crusoecloud.com/v1/``.
+    Defaults to ``https://api.inference.crusoecloud.com/v1``.
     Can be overridden via env var ``CRUSOE_API_BASE``.
     """
 
