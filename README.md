@@ -56,11 +56,17 @@ for chunk in llm.stream("Write a haiku about open source."):
 | `meta-llama/Llama-3.3-70B-Instruct` | Meta | 128k |
 | `openai/gpt-oss-120b` | OpenAI | 128k |
 | `deepseek-ai/DeepSeek-V3-0324` | DeepSeek | 160k |
-| `deepseek-ai/DeepSeek-R1-0528` | DeepSeek | 160k |
-| `deepseek-ai/DeepSeek-V3.1` | DeepSeek | 160k |
-| `Qwen/Qwen3-235B-A22B` | Qwen | 131k |
-| `google/gemma-3-12b-it` | Google | 128k |
-| `moonshotai/Kimi-K2-Thinking` | Moonshot AI | 131k |
+| `deepseek-ai/DeepSeek-V4-Flash` | DeepSeek | 1M |
+| `deepseek-ai/DeepSeek-V4-Pro` | DeepSeek | 1M |
+| `google/gemma-4-31b-it` | Google | 262k |
+| `moonshotai/Kimi-K2.6` | Moonshot AI | 256k |
+| `nvidia/Nemotron-3-Nano-30B-A3B` | NVIDIA | 262k |
+| `nvidia/Nemotron-3-Nano-Omni-Reasoning-30B-A3B` | NVIDIA | 262k |
+| `nvidia/Nemotron-3-Super-120B-A12B` | NVIDIA | 262k |
+| `nvidia/Nemotron-3-Ultra-550B` | NVIDIA | 262k |
+| `qwen/Qwen3-235B-A22B` | Qwen | 131k |
+| `zai/GLM-5.1` | Z.ai | 202k |
+| `zai/GLM-5.2` | Z.ai | 256k |
 
 See the latest model list at the [Crusoe Intelligence Foundry](https://console.crusoecloud.com/foundry/models).
 
@@ -159,6 +165,6 @@ make lint
 ## Links
 
 - [Crusoe Cloud Console](https://console.crusoecloud.com/)
-- [Crusoe Managed Inference Docs](https://docs.crusoecloud.com/managed-inference/overview)
+- [Crusoe Serverless Inference Docs](https://docs.crusoecloud.com/serverless-inference/overview)
 - [LangChain Documentation](https://docs.langchain.com/)
 - [API Reference](https://python.langchain.com/api_reference/crusoe/) *(available after package is published)*

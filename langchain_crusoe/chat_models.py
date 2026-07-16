@@ -128,15 +128,21 @@ class ChatCrusoe(BaseChatOpenAI):
             structured_llm = llm.with_structured_output(Joke)
             structured_llm.invoke("Tell me a joke about AI")
 
-    Available models (as of 2025):
+    Available chat models (as of July 2026):
         - meta-llama/Llama-3.3-70B-Instruct
         - openai/gpt-oss-120b
         - deepseek-ai/DeepSeek-V3-0324
-        - deepseek-ai/DeepSeek-R1-0528
-        - deepseek-ai/DeepSeek-V3.1
-        - Qwen/Qwen3-235B-A22B
-        - google/gemma-3-12b-it
-        - moonshotai/Kimi-K2-Thinking
+        - deepseek-ai/DeepSeek-V4-Flash
+        - deepseek-ai/DeepSeek-V4-Pro
+        - google/gemma-4-31b-it
+        - moonshotai/Kimi-K2.6
+        - nvidia/Nemotron-3-Nano-30B-A3B
+        - nvidia/Nemotron-3-Nano-Omni-Reasoning-30B-A3B
+        - nvidia/Nemotron-3-Super-120B-A12B
+        - nvidia/Nemotron-3-Ultra-550B
+        - qwen/Qwen3-235B-A22B
+        - zai/GLM-5.1
+        - zai/GLM-5.2
 
     See the Crusoe Intelligence Foundry for the latest model list:
     https://console.crusoecloud.com/foundry/models
@@ -148,7 +154,7 @@ class ChatCrusoe(BaseChatOpenAI):
         default="meta-llama/Llama-3.3-70B-Instruct",
         alias="model",
     )
-    """Model name to use. See https://docs.crusoecloud.com/managed-inference/overview
+    """Model name to use. See https://docs.crusoecloud.com/serverless-inference/overview
     for available models."""
 
     crusoe_api_key: Optional[SecretStr] = Field(

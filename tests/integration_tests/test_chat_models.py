@@ -103,7 +103,7 @@ class TestChatCrusoeModels:
         "model",
         [
             "meta-llama/Llama-3.3-70B-Instruct",
-            "google/gemma-3-12b-it",
+            "google/gemma-4-31b-it",
         ],
     )
     def test_model_invoke(self, model: str) -> None:
