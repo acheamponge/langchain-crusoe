@@ -4,7 +4,6 @@ import os
 from unittest.mock import patch
 
 import pytest
-from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
 
 from langchain_crusoe import ChatCrusoe
 

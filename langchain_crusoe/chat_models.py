@@ -212,9 +212,7 @@ class ChatCrusoe(BaseChatOpenAI):
         # Initialize the clients
         client_params: dict = {
             "api_key": (
-                self.crusoe_api_key.get_secret_value()
-                if self.crusoe_api_key
-                else None
+                self.crusoe_api_key.get_secret_value() if self.crusoe_api_key else None
             ),
             "base_url": self.crusoe_api_base,
             "timeout": self.request_timeout,
@@ -225,9 +223,7 @@ class ChatCrusoe(BaseChatOpenAI):
         if not self.client:
             self.client = openai.OpenAI(**client_params).chat.completions
         if not self.async_client:
-            self.async_client = (
-                openai.AsyncOpenAI(**client_params).chat.completions
-            )
+            self.async_client = openai.AsyncOpenAI(**client_params).chat.completions
         return self
 
     def _get_ls_params(
@@ -237,7 +233,7 @@ class ChatCrusoe(BaseChatOpenAI):
         params = self._get_invocation_params(stop=stop, **kwargs)
         ls_params = LangSmithParams(
             ls_provider="crusoe",
-            ls_model_name=self.model_name,
+            ls_model_name=params.get("model", self.model_name),
             ls_model_type="chat",
             ls_temperature=params.get("temperature", self.temperature),
         )

@@ -56,9 +56,7 @@ class TestChatCrusoeStream:
         chunks = list(llm.stream("Count from 1 to 5."))
         assert len(chunks) > 1
         # Combine all chunks to verify content
-        full_content = "".join(
-            chunk.content for chunk in chunks if chunk.content
-        )
+        full_content = "".join(chunk.content for chunk in chunks if chunk.content)
         assert len(full_content) > 0
 
 
