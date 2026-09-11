@@ -146,8 +146,8 @@ export CRUSOE_PROJECT_ID="my-project-id"
 
 ```bash
 # Clone the repo
-git clone https://github.com/acheamponge/langchain-crusoe.git
-cd langchain-crusoe
+git clone https://github.com/crusoecloud/crusoe-developer-hub.git
+cd crusoe-developer-hub/integrations/langchain
 
 # Install dependencies
 poetry install --with lint,typing,test,test_integration
