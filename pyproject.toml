@@ -4,7 +4,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "langchain-crusoe"
-version = "0.2.1"
+version = "0.2.2"
 description = "An integration package connecting Crusoe AI and LangChain"
 authors = ["Crusoe AI <devcommunity@crusoe.ai>"]
 readme = "README.md"
